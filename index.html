@@ -8,25 +8,113 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
 </head>
 <body>
-    <header>
-        <div class="nav-container">
-            <nav>
-                <a href="#info">Информация</a>
-                <a href="#features">Функции</a>
-                <a href="#stats">Статистика</a>
-            </nav>
-            <button class="auth-button"><i class="fas fa-user"></i></button>
-        </div>
-    </header>
+    
+  
+    <div class="bot-container-main">
+        <header>
+            <div class="nav-container">
+                <nav>
+                    <a href="#info">Информация</a>
+                    <a href="#features">Функции</a>
+                    <a href="#stats">Статистика</a>
+                </nav>
+                <button class="auth-button"><i class="fas fa-user"></i></button>
+                <script>
+                    const CLIENT_ID = '1139259244122751027'; // Замените на ваш Client ID из Discord Developer Portal
+                    const REDIRECT_URI = 'https://discord.com/oauth2/authorize?client_id=1139259244122751027&response_type=code&redirect_uri=http%3A%2F%2F127.0.0.1%3A3000%2Findex.html&scope=identify+guilds.members.read+guilds'; // Замените на ваш Redirect URI, указанный в Discord Developer Portal
+                
+                    document.getElementById('auth-button').addEventListener('click', () => {
+                      // Генерируем ссылку для авторизации на Discord
+                      const authUrl = `https://discord.com/api/oauth2/authorize?client_id=${CLIENT_ID}&redirect_uri=${encodeURIComponent(REDIRECT_URI)}&response_type=code&scope=identify`;
+                
+                      // Перенаправляем пользователя на страницу авторизации Discord
+                      window.location.href = authUrl;
+                    });
+                  </script>
+                  
+            </div>
+           
+            
+        </header>
+    </div>
     <main>
+       
+       
+      
+        
         <div class="bot-container">
-            <img src="Resources/Blumy.png" class="bot-image">
+
+            <img src="Resources/Blumy.png" class="bot-image-left">
             <div class="bot-info">
+              
+                <h2>Зручність та практичність</h2>
+                <p>Легкий, зрозумілий та ефективний інструмент задля модерації, керування та покращення Вашої спільноти в межах Діскорду. Керуйте, створюйте та слідкуйте!<br/>Ваша спільнота - під Вашим контролем</p>
+                <button class="add-bot-button" onclick="redictToBotLink()">Добавить Бота</button>
+            </div>
+
+            <script>
+                function redictToBotLink() {
+                  window.location.href = 'https://www.google.com'; // Замените ссылку на нужный URL
+                }
+                </script>
+                
+            
+        </div>
+
+        <div class="bot-container-2">
+
+           
+            <div class="bot-info">
+              
+                <h2>Ви і спільнота -<br>одне ціле</h2>
+                <p>Взаємодійте, керуйте та слідкуйте за учасниками серверу. Переглядайте досягнення, карму , історію покарань та багато іншого. Нагороджуйте за активність або гострий розум !</p>
+                <button class="add-bot-button">Добавить Бота</button>
+                
+            </div>
+            <img src="Resources/Rojer.png" class="bot-image-right">
+
+            
+
+            
+
+            
+
+            
+            <!-- <div class="bot-info">
+                <img src="Resources/Blumy.png" class="bot-image">
                 <h2>Зручність та практичність</h2>
                 <p>Легкий, зрозумілий та ефективний інструмент задля модерації, керування та покращення Вашої спільноти в межах Діскорду. Керуйте, створюйте та слідкуйте!<br/>Ваша спільнота - під Вашим контролем</p>
                 <button class="add-bot-button">Добавить Бота</button>
-            </div>
+            </div> -->
+            
+            
         </div>
+
+       <div class="bubbles-container">
+            <!-- Пузырек -->
+            <div class="bubble" style="left: 10%; animation-duration: 10s;"></div>
+            <!-- Пузырек -->
+            <div class="bubble" style="left: 20%; animation-duration: 12s;"></div>
+            <!-- Пузырек -->
+            <div class="bubble" style="left: 30%; animation-duration: 8s;"></div>
+            <!-- Пузырек -->
+            <div class="bubble" style="left: 40%; animation-duration: 11s;"></div>
+            <!-- Пузырек -->
+            <div class="bubble" style="left: 50%; animation-duration: 9s;"></div>
+            <!-- Пузырек -->
+            <div class="bubble" style="left: 60%; animation-duration: 10s;"></div>
+            <!-- Пузырек -->
+            <div class="bubble" style="left: 70%; animation-duration: 12s;"></div>
+            <!-- Пузырек -->
+            <div class="bubble" style="left: 80%; animation-duration: 8s;"></div>
+            <!-- Пузырек -->
+            <div class="bubble" style="left: 90%; animation-duration: 11s;"></div>
+          </div>
+
+        
     </main>
+   
 </body>
 </html>
+
+
